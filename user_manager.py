@@ -44,8 +44,12 @@ if __name__ == "__main__":
     # promedio = user_manager.average_user_id()
     # print ("El promedio es",promedio)
 
-    for i in range (1000):
-        user_manager.add_user (i, f"Soy el usuario agregado numero:{i}")
-    print (user_manager.get_all_names())
+    # for i in range (1000):
+    #     user_manager.add_user (i, f"Soy el usuario agregado numero:{i}")
+    # print (user_manager.get_all_names())
 
+    start = time.time()
+    user_manager.find_user(100)
+    end = time.time()
+    print("Duracion ",end-start," segundos")
 
