@@ -28,9 +28,9 @@ class UserManager:
 
 if __name__ == "__main__":
     user_manager = UserManager()
-    # for i in range(100):
-    #     user_manager.add_user(i,f"Yo soy el num : {i}")
-    # print("end")
+    for i in range(100):
+        user_manager.add_user(i,f"Yo soy el num : {i}")
+    print("end")
     # for i in range (100):
     #     print(user_manager.find_user(i))
 
@@ -48,8 +48,18 @@ if __name__ == "__main__":
     #     user_manager.add_user (i, f"Soy el usuario agregado numero:{i}")
     # print (user_manager.get_all_names())
 
-    start = time.time()
-    user_manager.find_user(100)
-    end = time.time()
-    print("Duracion ",end-start," segundos")
+    # start = time.time()
+    # user_manager.find_user(100)
+    # end = time.time()
+    # print("Duracion ",end-start," segundos")
+
+
+    duplicados = []
+    user_manager.add_user(1,"lol")
+    for i in user_manager.get_all_names():
+        if user_manager.get_all_names().count(i) > 1 and i not in duplicados:
+            duplicados.append(i)
+
+    print("Duplicados:", duplicados)
+    # → Duplicados: [1, 2]
 
