@@ -41,3 +41,7 @@ if __name__ == "__main__":
     nombre = user_manager.get_all_names()
     print(f"{nombre}")
 
+    promedio = user_manager.average_user_id()
+    print ("El promedio es",promedio)
+
+
